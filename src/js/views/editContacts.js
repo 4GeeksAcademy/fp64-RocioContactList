@@ -1,20 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../styles/addcontacts.css"
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-const AddContacts = () => {
+const EditContacts = () => {
     const [nombreCompleto, setNombreCompleto] = useState("")
     const [telefono, setTelefono] = useState("")
     const [email, setEmail] = useState("")
     const [direccion, setDireccion] = useState("")
     const { store, actions } = useContext(Context)
     const navigate = useNavigate()
-
+    const id = store.editContact[0].id
+    useEffect(() => {
+        console.log(store.editContact);
+    }, [store.editContact]);
     const handleSubmit = (e) => {
         e.preventDefault()
-        actions.addContact(nombreCompleto, email, direccion, telefono)
+        actions.editContacts(nombreCompleto, email, direccion, telefono, id)
         setNombreCompleto("")
         setTelefono("")
         setEmail("")
@@ -24,7 +27,7 @@ const AddContacts = () => {
 
     return (
         <>
-            <h1>Add Contacts</h1>
+            <h1>Edit Contact</h1>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Nombre completo</label>
@@ -48,4 +51,4 @@ const AddContacts = () => {
         </>
     )
 }
-export default AddContacts;
+export default EditContacts;

@@ -13,8 +13,10 @@ export const Home = () => {
 	const navigate = useNavigate()
 	useEffect(() => {
 		const fetchData = async () => {
-			await actions.createUser(); 
+			await actions.createUser();
 			await actions.getContacts();
+
+
 			console.log(store.contacts);
 		}; fetchData();
 	}, []);
@@ -26,7 +28,7 @@ export const Home = () => {
 		<div className="text-center mt-5">
 			<button onClick={() => navigate("/addcontacts")}>Añadir contacto</button>
 			<h2>Contactos</h2>
-			{store.contacts.map((contact, index) => (<Card key={index} name={contact.name} phone={contact.phone} email={contact.email} address={contact.address} />))}
+			{store.contacts.map((contact, index) => (<Card key={index} name={contact.name} phone={contact.phone} email={contact.email} address={contact.address} id={contact.id} />))}
 
 		</div>
 

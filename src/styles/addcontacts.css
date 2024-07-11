@@ -1,6 +1,89 @@
-.form-group{
+
+body {
+    /* background-image: url("https://img.freepik.com/foto-gratis/render-3d-boligrafo-cuaderno_23-2150851314.jpg?t=st=1720692518~exp=1720696118~hmac=cc9760dbc653b2960c22cb2e293abf4923bc658781ce09d9a0d8cddd6572f66c&w=360"); */
+    background-image: url("https://img.freepik.com/foto-gratis/representacion-3d-boligrafo-cuaderno_23-2150851396.jpg?t=st=1720692671~exp=1720696271~hmac=e6803d4b15a0bc58751f12b71797832dedd013303c67892a49fd7b9501467d59&w=1380"); 
+    /* background-image: url('https://img.freepik.com/foto-gratis/programacion-agenda_53876-88433.jpg?t=st=1720688801~exp=1720692401~hmac=68ba1c8a1681f1f6d8f179598f0c08275eeea6bac710281de25ff8453b87cb8b&w=996'); */
+    font-family: Arial, sans-serif;
+    /* background-color: #de4040; */
     display: flex;
     justify-content: center;
-    
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+}
 
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container {
+    /* background: #fff; */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 400px;
+   
+    background-size: cover;
+    background-position: center;
+}
+
+.form-group {
+    margin-bottom: 20px; 
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+.form-element {
+    width: 100%; /* Asegura que todos los elementos tengan el mismo ancho */
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */
+    margin-bottom: 15px; /* Añade un poco de espacio entre los elementos del formulario */
+}
+
+/* Si el botón de guardar necesita ajustes específicos, puedes añadir una clase adicional o seleccionarlo directamente */
+button.btn.btn-primary {
+    padding: 0.375rem 0.75rem; /* Ajusta el padding para que coincida con los inputs, si es necesario */
+    font-size: 1rem; /* Asegura que el tamaño de la fuente sea consistente */
+    line-height: 1.5; /* Ajusta la altura de línea para centrar el texto verticalmente */
+    border-radius: 0.25rem; /* Asegura que el radio del borde coincida con los inputs, si es necesario */
+}
+.form-control {
+    max-width: 90%; /* Ajusta esto según tus necesidades */
+    margin-left: 20px; /* Añade un margen si es necesario */
 }
