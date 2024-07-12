@@ -28,8 +28,9 @@ export const Home = () => {
 		<div className="text-center mt-5">
 			<button onClick={() => navigate("/addcontacts")}>Añadir contacto</button>
 			<h2>Contactos</h2>
-			{store.contacts.map((contact, index) => (<Card key={index} name={contact.name} phone={contact.phone} email={contact.email} address={contact.address} id={contact.id} />))}
-
+			<div className="principal-container">
+				{store.contacts.map((contact, index) => (<Card key={index} name={contact.name} phone={contact.phone} email={contact.email} address={contact.address} id={contact.id} />))}
+			</div>
 		</div>
 
 	)
